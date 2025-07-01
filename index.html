@@ -33,44 +33,65 @@
 }
 
 .navbar.scrolled {
-  background-color: #12025c !important;
+  background-color:#12025c  !important;
 }
+
+
+.hero-section {
+  background: url('hero-elt.jpg') center center / cover no-repeat;
+  min-height: 90vh; /* Increase height: try 100vh for full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
 
   </style>
 </head>
 <body>
 
+<!-- Navigation -->
+<nav id="mainNavbar" class="navbar navbar-dark fixed-top bg-transparent">
+  <div class="container-fluid px-3">
+    <!-- Brand Logo -->
+<a class="navbar-brand" href="#">
+  <img src="elt-logo2.png" alt="ELT Logo" height="60" style="width: auto;" class="d-inline-block align-text-top">
+</a>
 
-    <!-- Navigation -->
-<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
-  <div class="container d-flex flex-column align-items-center">
-    <!-- Brand (optional, center it above menu or remove completely) -->
-    <!-- <a class="navbar-brand fw-bold text-white mb-2" href="#">ELT</a> -->
 
-    <!-- Toggle button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Toggle button for sidebar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#eltSidebar"
+      aria-controls="eltSidebar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Centered nav items -->
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#about">About ELT</a></li>
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#sessions">Core Sessions</a></li>
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#vault">Learning Vault</a></li>
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#access">Books</a></li>
-        <li class="nav-item"><a class="nav-link text-white px-3" href="#join-group">Join Group</a></li>
-      </ul>
-    </div>
   </div>
 </nav>
 
 
+<!-- Sidebar Offcanvas -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="eltSidebar" aria-labelledby="eltSidebarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="eltSidebarLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#about">About ELT</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#sessions">Core Sessions</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#vault">Learning Vault</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#access">Books</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#join-group">Join Group</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 <!-- Hero Section with Background Image -->
-<section class="text-white text-center py-5" style="background: url('hero-elt.jpg') center center / cover no-repeat;">
+<section class="hero-section text-white text-center">
   <div style="max-width: 1700px; margin: 0 auto; padding: 0 2rem;">
     <h1 class="display-5 fw-bold">Understand Your Mind. Transform Your Learning.</h1>
     <p class="lead mt-3">Join the ELT Movement — Break Learning Barriers & Finish Strong</p>
@@ -105,11 +126,30 @@
 
       <!-- Optional Image Placeholder -->
       <div class="col-lg-6 text-center">
-        <img src="your-image.jpg" class="img-fluid rounded shadow" alt="ELT Learning" />
+        <img src="elt-about.png" class="img-fluid rounded shadow" alt="ELT Learning" />
       </div>
     </div>
   </div>
 </section>
+
+<!-- ELT Jingle Section -->
+<section id="jingle" class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="text-elt-blue fw-bold mb-3">🎶 The ELT Anthem</h2>
+    <p class="lead text-muted mb-4">Let the rhythm of transformation move you — play the ELT jingle and stay inspired on your learning journey.</p>
+    
+    <!-- Audio Player -->
+    <div class="d-flex justify-content-center">
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="elt-jingle.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <p class="text-muted mt-3 small">Prefer to keep it? <a href="elt-jingle.mp3" class="text-decoration-underline" download>Download the ELT Jingle</a></p>
+  </div>
+</section>
+
 
 <!-- Highlight Sessions Section -->
 <section id="sessions" class="py-5 bg-white">
@@ -123,7 +163,7 @@
     <div class="card-body">
       <h5 class="card-title text-elt-blue fw-semibold">Why Learning Feels Hard</h5>
       <p class="card-text">Uncover the hidden emotional and mental blocks that make learning difficult — and how to break through them.</p>
-      <a href="#" class="btn btn-elt mt-3">Read More</a>
+<a href="sessions.html#session1" class="btn btn-elt mt-3">Read More</a>
     </div>
   </div>
 </div>
@@ -217,7 +257,6 @@
 </section>
 
 <!-- Private Content Access Section -->
-<!-- Private Content Access Section -->
 <section id="access" class="py-5 bg-white">
   <div class="container text-center">
     <h2 class="text-elt-blue fw-bold mb-2">🔒 Unlock Full ELT Access</h2>
@@ -261,16 +300,17 @@
   </div>
 </section>
 -->
-
 <!-- Footer -->
-<footer class="text-white py-5" style="background-color: #12025c;">
+<footer class="text-white py-5 position-relative" style="background-color: #12025c;">
   <div class="container text-center">
+
+    <!-- Main Content -->
     <h2 class="fw-bold mb-3">📲 Join the ELT WhatsApp Group</h2>
     <p class="lead mb-4">
       Be part of a vibrant learning community where we break mental barriers, unlock focus, and guide you toward intentional learning every week.
     </p>
 
-    <!-- Left-Aligned Feature List Centered -->
+    <!-- Feature List -->
     <div class="d-flex justify-content-center">
       <div class="text-start" style="max-width: 500px;">
         <p class="fw-semibold mb-2">💬 What you’ll get:</p>
@@ -283,17 +323,29 @@
       </div>
     </div>
 
-    <a href="https://wa.me/YOURGROUPLINK" class="btn btn-light btn-lg fw-semibold px-4 py-2 mt-3">
+    <!-- Join Button -->
+    <a href="https://chat.whatsapp.com/IUMJArfzM67CTMStTMfhrQ" class="btn btn-light btn-lg fw-semibold px-4 py-2 mt-3">
       Join Now on WhatsApp
     </a>
+
+    <!-- Mobile Logo (below button) -->
+    <div class="mt-4 d-block d-md-none">
+      <img src="elt-logo2.png" alt="ELT Logo" height="120" style="width: auto;">
+    </div>
 
     <!-- Copyright -->
     <div class="mt-5">
       <p class="mb-1 text-white-50">© 2025 ELT Movement. All rights reserved.</p>
       <small class="text-white-50">Effective Learning Transformation | Designed with purpose</small>
     </div>
+
+    <!-- Desktop Logo (lower-left corner) -->
+    <img src="elt-logo2.png" alt="ELT Logo"
+      class="d-none d-md-block"
+      style="position: absolute; bottom: 40px; left: 40px; height: 120px; width: auto;">
   </div>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
