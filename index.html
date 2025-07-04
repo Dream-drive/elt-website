@@ -13,8 +13,8 @@
       color: var(--elt-blue);
     }
     .btn-elt {
-      background-color: white;
-      color: black;
+      background-color: var(--elt-blue);
+      color: white;
       border: none;
     }
     .btn-elt-outline {
@@ -46,6 +46,29 @@
   text-align: center;
   padding: 4rem 2rem;
 }
+
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  #mainNavbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+  #mainNavbar .navbar-brand img {
+    height: 30px; /* smaller logo on mobile */
+  }
+}
+
 
 
   </style>
@@ -93,9 +116,12 @@
 <!-- Hero Section with Background Image -->
 <section class="hero-section text-white text-center">
   <div style="max-width: 1700px; margin: 0 auto; padding: 0 2rem;">
-    <h1 class="display-5 fw-bold">Understand Your Mind. Transform Your Learning.</h1>
-    <p class="lead mt-3">Join the ELT Movement — Break Learning Barriers & Finish Strong</p>
-    <a href="https://chat.whatsapp.com/IUMJArfzM67CTMStTMfhrQ" class="btn btn-elt btn-lg mt-4">Join Our WhatsApp Group</a>
+    <h1 class="fw-bold hero-title">Understand Your Mind. Transform Your Learning.</h1>
+<p class="lead mt-3 hero-subtitle">Join the ELT Movement — Break Learning Barriers & Finish Strong</p>
+
+<a href="https://chat.whatsapp.com/IUMJArfzM67CTMStTMfhrQ" class="btn btn-light btn-lg text-elt-blue mt-4">
+  Join Our WhatsApp Group
+</a>
   </div>
 </section>
 
@@ -105,7 +131,7 @@
 
 
 
-<!-- About ELT Section -->
+<!-- About ELT Section --> 
 <section class="py-5 bg-white text-elt-blue">
   <div class="container">
     <div class="row align-items-center">
@@ -113,24 +139,35 @@
       <div class="col-lg-6 mb-4 mb-lg-0">
         <h2 class="fw-bold">What is ELT?</h2>
         <p class="mt-3">
-          ELT (Effective Learning Transformation) is a learner-focused movement designed to help students
-          overcome internal challenges that affect their academic success — things like emotional blocks,
-          poor focus, procrastination, and confusion.
+          ELT (Effective Learning Transformation) is a mindset-based education movement that helps learners master the *internal battles* that block progress — things like emotional instability, procrastination, confusion, and lack of drive.
         </p>
         <p>
-          We focus on the learner, not just the subject. Through practical, real-life strategies, ELT helps
-          you transform your learning from the inside out.
+          Whether you’re a high school student, tertiary learner, teacher, or lifelong learner — ELT helps you break through emotional barriers so you can study with clarity, confidence, and consistency.
         </p>
-        <a href="#sessions" class="btn btn-elt mt-3">Explore Core Sessions</a>
+        <p class="fw-semibold">
+          <em>ELT exists to train the mind, restore the spirit, and transform how we learn — from the inside out.</em>
+        </p>
+        <p>
+          Most learners today don’t fail because of poor teaching or bad textbooks. They fail because their emotions are in control. They whisper to themselves: <em>“Not now… maybe later… tomorrow…”</em> — and the cycle repeats.
+        </p>
+        <p>
+          That’s why ELT doesn’t just feed the mind with content. We equip the whole learner — spirit, brain, and behavior. Because if the inner man is broken, nothing else will work.
+        </p>
+        <p>
+          Since this movement began, we’ve seen students go from inconsistent and discouraged to focused, driven, and emotionally strong. That’s the power of inner transformation.
+        </p>
+        <a href="#sessions" class="btn btn-elt mt-3">See How ELT Helps</a>
       </div>
 
-      <!-- Optional Image Placeholder -->
+      <!-- Image -->
       <div class="col-lg-6 text-center">
-        <img src="elt-about.png" class="img-fluid rounded shadow" alt="ELT Learning" />
+        <img src="about.png" class="img-fluid rounded shadow" alt="ELT Learning" />
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- ELT Jingle Section -->
 <section id="jingle" class="py-5 bg-white text-center">
@@ -287,7 +324,7 @@
             </div>
           </form>
 
-          <p class="text-muted small mt-2">We’ll notify you first when both books go live. No spam. Unsubscribe anytime.</p>
+          <p class="text-muted small mt-2">You’ll be notified first when both books are live and ready</p>
         </div>
       </div>
     </div>
